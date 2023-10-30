@@ -1,0 +1,194 @@
+%!TeX program = pdflatex
+% Geoff Boeing's Curriculum Vitae
+% Email: boeing@usc.edu
+% Web: https://geoffboeing.com/
+% Repo: https://github.com/gboeing/cv
+
+\documentclass[11pt,letterpaper]{report}
+
+\usepackage[T1]{fontenc} % output T1 font encoding (8-bit) for accented characters as single glyph
+\usepackage[strict,autostyle]{csquotes} % smart and nestable quote marks
+\usepackage[USenglish]{babel} % regionalize hyphens, quote marks, etc automatically
+\usepackage{microtype}% improve text appearance with kerning, etc
+\usepackage{datetime} % enable formatting of date output
+\usepackage{tabto}    % make nice tabbing
+\usepackage{hyperref} % enable hyperlinks and pdf metadata
+\usepackage{geometry} % manually set page margins
+\usepackage{enumitem} % enumerate with [resume] option
+\usepackage{titlesec} % allow custom section fonts
+\usepackage{setspace} % custom line spacing
+
+% what is your name?
+\newcommand{\myname}{Geoff Boeing}
+
+% select default typefaces
+\usepackage{ebgaramond} % document's serif typeface
+\usepackage{tgheros}    % document's sans serif typeface
+
+% how far to tab for list items with left-aligned date: different fonts need different widths
+\newcommand{\listtabwidth}{1.7cm}
+
+% define font to use as document's title
+\newcommand{\namefont}[1]{{\normalfont\bfseries\Huge{#1}}}
+
+% set section heading fonts and before/after spacing
+\SetTracking{encoding=*, family=\sfdefault}{30} % increase sans serif headings tracking
+\titleformat{\section}{\lsstyle\sffamily\small\bfseries\uppercase}{}{}{}{}
+\titlespacing{\section}{0pt}{30pt plus 4pt minus 4pt}{8pt plus 2pt minus 2pt}
+
+% set subsection heading fonts and before/after spacing
+\titleformat{\subsection}{\lsstyle\sffamily\footnotesize\bfseries}{}{}{}{}
+\titlespacing{\subsection}{0pt}{16pt plus 4pt minus 4pt}{4pt plus 2pt minus 2pt}
+
+% set page margins (assumes letter paper)
+\geometry{body={6.5in, 9.0in},
+    left=1.0in,
+    top=1.0in}
+
+% prevent paragraph indentation
+\setlength\parindent{0em}
+
+% set line spacing
+\setstretch{0.9}
+
+% define space between list items
+\newcommand{\listitemspace}{0.25em}
+
+% make unordered lists without bullets and use compact spacing
+\renewenvironment{itemize}
+{\begin{list}{}{\setlength{\leftmargin}{0em}
+                \setlength{\parskip}{0em}
+                \setlength{\itemsep}{\listitemspace}
+                \setlength{\parsep}{\listitemspace}}}
+{\end{list}}
+
+% make tabbed lists so content is left-aligned next to years
+\TabPositions{\listtabwidth}
+\newlist{tablist}{description}{3}
+\setlist[tablist]{leftmargin=\listtabwidth,
+    labelindent=0em,
+    topsep=0em,
+    partopsep=0em,
+    itemsep=\listitemspace,
+    parsep=\listitemspace,
+    font=\normalfont}
+
+% print only the month and year when using \today
+\newdateformat{monthyeardate}{\monthname[\THEMONTH] \THEYEAR}
+
+% define hyperlink appearance and metadata for pdf properties
+\hypersetup{
+    colorlinks  = true,
+    urlcolor    = black,
+    citecolor   = black,
+    linkcolor   = black,
+    pdfauthor   = {\myname},
+    pdfkeywords = {city planning, housing, street networks, transportation, urban design, urban informatics},
+    pdftitle    = {\myname: Curriculum Vitae},
+    pdfsubject  = {Curriculum Vitae},
+    pdfpagemode = UseNone
+}
+
+\begin{document}
+    \raggedright{}
+
+    % display your name as the document title
+    \namefont{\myname}
+
+    % affiliation and contact info blocks
+    \vspace{1em}
+    \begin{minipage}[t]{0.700\textwidth}
+        % current primary affiliation, left-aligned
+        Department of Urban Planning and Spatial Analysis \\
+        Sol Price School of Public Policy \\
+        University of Southern California
+    \end{minipage}
+    \begin{minipage}[t]{0.295\textwidth}
+        % contact info details, right-aligned
+        \flushright{}
+        \href{mailto:boeing@usc.edu}{boeing@usc.edu} \\
+        +1 213 740 2773 \\
+        \href{https://geoffboeing.com}{geoffboeing.com}
+    \end{minipage}
+
+
+    \section*{Education}
+
+    \begin{tablist}
+
+        \item[Ph.D.] \tab{}City and Regional Planning, University of California, Berkeley, 2017
+        \item[M.S.]  \tab{}Information Management, Arizona State University, 2006
+        \item[B.S.]  \tab{}Computer Information Systems \textit{summa cum laude}, Arizona State University, 2004
+
+    \end{tablist}
+
+
+
+    \section*{Appointments}
+
+    \begin{tablist}
+
+        \item[2019--]   \tab{}University of Southern California \\
+                              Assistant Professor, Department of Urban Planning and Spatial Analysis, 2019-- \\
+                              Faculty Affiliate, Spatial Sciences Institute, 2021--
+
+        \item[2021--]   \tab{}Brookings Institution \\
+                              Nonresident Senior Fellow, Metropolitan Policy Program \\
+
+        \item[2018--19] \tab{}Northeastern University \\
+                              Assistant Professor, School of Public Policy and Urban Affairs \\
+                              Faculty Affiliate, Network Science Institute \\
+                              Faculty Affiliate, Global Resilience Institute
+
+        \item[2017--18] \tab{}University of California, Berkeley \\
+                              Postdoctoral Researcher, Department of City and Regional Planning
+
+    \end{tablist}
+
+
+
+    \section*{Research Areas}
+
+    \begin{itemize}
+
+        \item Urban informatics and geospatial data science: computational statistics, visualization, and spatial analysis
+        \item Transportation planning: street network design, access, equity, and urban form
+        \item Housing: emerging technology platforms' impacts on markets, residential mobility, and segregation
+
+    \end{itemize}
+
+
+    \section*{Consulting}
+
+    \begin{tablist}
+
+        \item[2017--19] \tab{}The Public Good Projects, New York, New York
+        \item[2017--18] \tab{}Calthorpe Analytics, Berkeley, California
+        \item[2016--18] \tab{}UrbanSim Inc., Berkeley, California
+        \item[2013--15] \tab{}Avalon Health Economics, Morristown, New Jersey
+        \item[2013]     \tab{}Raimi \& Associates, Berkeley, California
+        \item[2010--11] \tab{}Voluntary Service Overseas, London, England
+
+    \end{tablist}
+
+
+
+    \section*{Professional Employment}
+
+    \begin{tablist}
+
+        \item[2009--13] \tab{}Accenture, New York, New York; London, England; San Diego, California
+        \item[2007--09] \tab{}Permission Data, New York, New York
+        \item[2004--07] \tab{}Acumen Inc., Mesa, Arizona
+
+    \end{tablist}
+
+
+
+    % display today's date as Month Year after a vertical space below the end of the text
+    \begin{center}
+        \vfill
+        Updated \monthyeardate\today
+    \end{center}
+
+\end{document}
