@@ -16,6 +16,9 @@
 \usepackage{enumitem} % enumerate with [resume] option
 \usepackage{titlesec} % allow custom section fonts
 \usepackage{setspace} % custom line spacing
+\usepackage{graphicx}
+\usepackage{tikzpagenodes}
+\graphicspath{ {./images/} }
 
 % what is your name?
 \newcommand{\myname}{Gauthier Billot}
@@ -89,22 +92,21 @@
 }
 
 \begin{document}
+
+    \begin{tikzpicture}[remember picture,overlay,shift={(current page.north east)}]
+    \node[anchor=north east,xshift=-2cm,yshift=-2cm]{\includegraphics[width=4cm]{pic}};
+    \end{tikzpicture}
+
     \raggedright{}
 
     % display your name as the document title
     \namefont{\myname}
 
+
     % affiliation and contact info blocks
     \vspace{1em}
     \begin{minipage}[t]{0.700\textwidth}
         % current primary affiliation, left-aligned
-        :TODO:\\
-        :TODO:\\
-        :TODO:
-    \end{minipage}
-    \begin{minipage}[t]{0.295\textwidth}
-        % contact info details, right-aligned
-        \flushright{}
         \href{mailto:gauthier.billot@gmail.com}{gauthier.billot@gmail.com} \\
         +32 497 111 247 \\
         \href{http://gogopr.org}{http://gogopr.org}
