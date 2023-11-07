@@ -28,7 +28,7 @@
 \usepackage{tgheros}    % document's sans serif typeface
 
 % how far to tab for list items with left-aligned date: different fonts need different widths
-\newcommand{\listtabwidth}{1.7cm}
+\newcommand{\listtabwidth}{2.5cm}
 
 % define font to use as document's title
 \newcommand{\namefont}[1]{{\normalfont\bfseries\Huge{#1}}}
@@ -94,7 +94,7 @@
 \begin{document}
 
     \begin{tikzpicture}[remember picture,overlay,shift={(current page.north east)}]
-    \node[anchor=north east,xshift=-2cm,yshift=-2cm]{\includegraphics[width=4cm]{pic}};
+    \node[anchor=north east,xshift=-2cm,yshift=-3cm]{\includegraphics[width=4cm]{pic}};
     \end{tikzpicture}
 
     \raggedright{}
@@ -107,6 +107,8 @@
     \vspace{1em}
     \begin{minipage}[t]{0.700\textwidth}
         % current primary affiliation, left-aligned
+        Born 11-05-1986 \\
+        Mons, Belgium \\
         \href{mailto:gauthier.billot@gmail.com}{gauthier.billot@gmail.com} \\
         +32 497 111 247 \\
         \href{http://gogopr.org}{http://gogopr.org}
@@ -117,72 +119,89 @@
 
     \begin{tablist}
 
-        \item[Ph.D.] \tab{}City and Regional Planning, University of California, Berkeley, 2017
-        \item[M.S.]  \tab{}Information Management, Arizona State University, 2006
-        \item[B.S.]  \tab{}Computer Information Systems \textit{summa cum laude}, Arizona State University, 2004
+        \item[2006-2009]  \tab{}Bachelor in Computer Science with greatest distinction\\
+                                  Haute Ecole Provinciale Mons-Borinage-Centre,\\
+                                  Mons, Belgium
+        \item[2004]     \tab{}Faculté Polytechnique Admission\\
+                              Mons, Belgium
+        \item[1998-2004]  \tab{}High School Diploma \\
+                                  Collège Sainte-Marie \\
+                                  Saint-Ghislain, Belgium
 
     \end{tablist}
 
-
-
-    \section*{Appointments}
+    \section*{Computer Skills}
 
     \begin{tablist}
 
-        \item[2019--]   \tab{}University of Southern California \\
-                              Assistant Professor, Department of Urban Planning and Spatial Analysis, 2019-- \\
-                              Faculty Affiliate, Spatial Sciences Institute, 2021--
-
-        \item[2021--]   \tab{}Brookings Institution \\
-                              Nonresident Senior Fellow, Metropolitan Policy Program \\
-
-        \item[2018--19] \tab{}Northeastern University \\
-                              Assistant Professor, School of Public Policy and Urban Affairs \\
-                              Faculty Affiliate, Network Science Institute \\
-                              Faculty Affiliate, Global Resilience Institute
-
-        \item[2017--18] \tab{}University of California, Berkeley \\
-                              Postdoctoral Researcher, Department of City and Regional Planning
+        \item[Languages] \tab{}C/C++, C\#, Java, JavaScript, Lua, HLSL, GLSL, Haxe, Python
+        \item[Tools] \tab{}Vim, GDB, QtCreator, Perf, Valgrind, Gcc, Clang
+        \item[Platforms] \tab{}Linux, Windows, Mac, Switch, PlayStation, XBox, Android, iOS
+        \item[Gamedev] \tab{}Profiling, Debugging, Supporting platforms, Designing \& Implementing mechanics
 
     \end{tablist}
 
+    \section*{Languages}
 
+    \begin{tablist}
 
-    \section*{Research Areas}
+        \item[French] \tab{}Mother tongue
+        \item[English] \tab{}Advanced (default work language)
+
+    \end{tablist}
+
+    \section*{Experience}
+
+    \begin{tablist}
+
+        \item[2018--]        \tab{}Lead platform developer at Fire Falcom
+        \item[2009-2017]        \tab{}Lead game programmer at Fishing Cactus
+        \item[2008]        \tab{}Student Programmer at ITS Solutions
+        \item[2003]        \tab{}Student worker at Schreder-Hazemeyer
+
+    \end{tablist}
+
+    \section*{Interests}
+
+    \begin{tablist}
+
+        \item[Music]        \tab{}Guitar/bass player, amateur composer, Rock
+        \item[Cinema]        \tab{}Amateur of SciFi movies and English comedy
+        \item[Base-ball]    \tab{}Belgium Minor League 2002 Champion
+        \item[Skateboard]   \tab{}Amateur street skateboarder
+
+    \end{tablist}
+
+    \section*{Events}
+
+    \begin{tablist}
+
+        \item[2017]        \tab{}Banana Jam
+        \item[2017]        \tab{}My First Game Jam Winter
+        \item[2016]        \tab{}Fishing Cactus Internal Game Jam
+        \item[2016]        \tab{}Fishing Jam 2
+        \item[2016]        \tab{}City Sim Jam
+        \item[2016]        \tab{}Lowrezjam
+        \item[2015]        \tab{}Creative Jam in Mons
+        \item[2015]        \tab{}Global Game Jam in Brussels
+        \item[2014]        \tab{}Global Game Jam in Antwerpen
+        \item[2014]        \tab{}Monster Game Jam in Brussels
+        \item[2013]        \tab{}Global Game Jam in Antwerpen
+        \item[2011]        \tab{}Global Game Jam in Antwerpen
+        \item[2006]        \tab{}Finalist for Prologin, the French National Computer Science Contest
+
+    \end{tablist}
+
+    \section*{About}
 
     \begin{itemize}
 
-        \item Urban informatics and geospatial data science: computational statistics, visualization, and spatial analysis
-        \item Transportation planning: street network design, access, equity, and urban form
-        \item Housing: emerging technology platforms' impacts on markets, residential mobility, and segregation
+        \item His interest in game development dates back to his childhood.
+        \item Specializing in porting games to all major platforms is his current forte.
+        \item Familiar with working on unfamiliar code bases, he adeptly applies modifications and improvements.
+        \item His preference for technical constraints leads him to participate in various game jams as well.
 
     \end{itemize}
-
-
-    \section*{Consulting}
-
-    \begin{tablist}
-
-        \item[2017--19] \tab{}The Public Good Projects, New York, New York
-        \item[2017--18] \tab{}Calthorpe Analytics, Berkeley, California
-        \item[2016--18] \tab{}UrbanSim Inc., Berkeley, California
-        \item[2013--15] \tab{}Avalon Health Economics, Morristown, New Jersey
-        \item[2013]     \tab{}Raimi \& Associates, Berkeley, California
-        \item[2010--11] \tab{}Voluntary Service Overseas, London, England
-
-    \end{tablist}
-
-
-
-    \section*{Professional Employment}
-
-    \begin{tablist}
-
-        \item[2009--13] \tab{}Accenture, New York, New York; London, England; San Diego, California
-        \item[2007--09] \tab{}Permission Data, New York, New York
-        \item[2004--07] \tab{}Acumen Inc., Mesa, Arizona
-
-    \end{tablist}
 
 
 
